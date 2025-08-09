@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QueueAway™ - Smart Queue Management Revolution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Enhanced Background -->
+  <div class="bg-gradient"></div>
+
+  <!-- Modern Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-network-wired"></i>
+        QueueAway™
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#my-queues" class="nav-link">My Queues</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-sparkles"></i>
+        <span>AI-Powered • IoT-Enabled • Blockchain-Secured</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Never Wait in Line Again
+      </h1>
+      
+      <p class="hero-subtitle">
+        Join millions who've revolutionized their waiting experience. Smart queues, real-time updates, 
+        and AI predictions that save you hours every week.
+      </p>
+      
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="openCreateQueueModal()">
+          <i class="fas fa-plus"></i>
+          Create Smart Queue
+        </button>
+        <button class="btn btn-secondary" onclick="openJoinQueueModal()">
+          <i class="fas fa-qrcode"></i>
+          Join Existing Queue
+        </button>
+      </div>
+      
+      <div class="hero-features">
+        <div class="feature-badge">
+          <i class="fas fa-clock" style="color: var(--success);"></i>
+          <span>Average 73% time saved</span>
+        </div>
+        <div class="feature-badge">
+          <i class="fas fa-users" style="color: var(--primary);"></i>
+          <span>2M+ happy users</span>
+        </div>
+        <div class="feature-badge">
+          <i class="fas fa-shield-alt" style="color: var(--warning);"></i>
+          <span>Enterprise-grade security</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How QueueAway Works</h2>
+        <p class="section-subtitle">
+          Three simple steps to transform your waiting experience forever
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Create or Join</h3>
+          <p class="step-description">
+            Business owners create smart queues with AI optimization. 
+            Customers join instantly by scanning QR codes or entering queue IDs.
+          </p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Track Real-Time</h3>
+          <p class="step-description">
+            Get live updates on your position, accurate wait times, and 
+            smart notifications. Our AI predicts delays before they happen.
+          </p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Enjoy Freedom</h3>
+          <p class="step-description">
+            Leave the physical line! Get alerted when it's almost your turn. 
+            Shop, work, or relax while maintaining your place virtually.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Queues Section -->
+  <section id="my-queues" class="my-queues">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Queues</h2>
+        <p class="section-subtitle">
+          Track your active queue positions and history
+        </p>
+      </div>
+      
+      <div id="activeQueues" class="queues-container">
+        <div class="empty-state">
+          <i class="fas fa-clipboard-list"></i>
+          <h3>No Active Queues</h3>
+          <p>Join a queue to see real-time tracking here</p>
+          <button class="btn btn-primary" onclick="openJoinQueueModal()">
+            <i class="fas fa-plus"></i>
+            Join Your First Queue
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Features Section -->
+  <section id="features" class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Features</h2>
+        <p class="section-subtitle">
+          Discover what makes QueueAway™ the ultimate smart queue solution
+        </p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number"><i class="fas fa-crown"></i></div>
+          <h3 class="step-title">Pro Plan</h3>
+          <h4 class="step-subtitle">Coming out Soon!</h4>    
+          <p class="step-description">
+            Unlimited smart queues, priority wait time predictions, and early turn alerts.
+          </p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number"><i class="fas fa-ticket-alt"></i></div>
+          <h3 class="step-title">Free Plan</h3>
+          <p class="step-description">
+            Create 1 smart queue for free and join unlimited existing queues.
+          </p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number"><i class="fas fa-bell"></i></div>
+          <h3 class="step-title">Smart Notifications</h3>
+          <p class="step-description">
+            Get real-time alerts when you’re close to your turn, so you never miss it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="my-queues">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          We’d love to hear from you. Get in touch for support, feedback, or partnerships.
+        </p>
+      </div>
+      
+      <div class="empty-state">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>Send us a message</h3>
+        <p>Email: support@queueaway.com<br>Phone: +91 98765 43210</p>
+        <button class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i>
+          Email Us
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Chatbot Section -->
+  <section class="ai-assistant" id="aiAssistant">
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-info">
+          <h4>Queue Assistant</h4>
+          <span class="status online">Online</span>
+        </div>
+        <button class="chat-toggle" onclick="toggleChat()">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+      
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+          <div class="message-content">
+            <p>👋 Hi! I'm your Queue Assistant. I can help you with:</p>
+            <ul>
+              <li>🔍 Finding nearby queues</li>
+              <li>⏰ Predicting wait times</li>
+              <li>📱 Queue management tips</li>
+              <li>❓ Answering your questions</li>
+            </ul>
+            <p>What can I help you with today?</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat-input-container">
+        <div class="quick-actions">
+          <button class="quick-btn" onclick="sendQuickMessage('Find nearby queues')">
+            📍 Find Nearby
+          </button>
+          <button class="quick-btn" onclick="sendQuickMessage('How long is the wait?')">
+            ⏰ Check Wait Time
+          </button>
+          <button class="quick-btn" onclick="sendQuickMessage('Help me optimize')">
+            🚀 Optimize Queue
+          </button>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Ask me anything about queues..." />
+          <button onclick="sendMessage()">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Queue Modal -->
+  <div class="modal-overlay" id="createQueueModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Create Smart Queue</h3>
+        <button class="modal-close" onclick="closeModal('createQueueModal')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="createQueueForm">
+          <div class="form-group">
+            <label class="form-label">Business Name</label>
+            <input type="text" name="businessName" class="form-input" placeholder="e.g., Apollo Clinic Bandra" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Service Type</label>
+            <input type="text" name="serviceType" class="form-input" placeholder="e.g., General Consultation, Banking, Restaurant" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Location</label>
+            <input type="text" name="location" class="form-input" placeholder="e.g., Bandra West, Mumbai" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Average Service Time (minutes)</label>
+            <input type="number" name="serviceTime" class="form-input" placeholder="5" min="1" max="60" value="5" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Maximum Capacity</label>
+            <input type="number" name="capacity" class="form-input" placeholder="50" min="10" max="500" value="50" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+            <i class="fas fa-plus"></i>
+            Create Queue & Generate QR Code
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Queue Modal -->
+  <div class="modal-overlay" id="joinQueueModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Join Queue</h3>
+        <button class="modal-close" onclick="closeModal('joinQueueModal')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <p style="color: rgba(255,255,255,0.7);">Scan QR code or enter Queue ID</p>
+        </div>
+        
+        <!-- QR Scanner Placeholder -->
+        <div class="qr-scanner-placeholder">
+          <i class="fas fa-camera"></i>
+          <p>Camera access required for QR scanning</p>
+          <button class="btn btn-secondary" onclick="requestCameraAccess()">
+            <i class="fas fa-video"></i>
+            Enable Camera
+          </button>
+        </div>
+        
+        <div class="divider">
+          <span>OR</span>
+        </div>
+        
+        <form id="joinQueueForm">
+          <div class="form-group">
+            <label class="form-label">Queue ID</label>
+            <input type="text" name="queueId" class="form-input" placeholder="e.g., QA123456" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Name (Optional)</label>
+            <input type="text" name="userName" class="form-input" placeholder="Your name for personalized updates">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number (Optional)</label>
+            <input type="tel" name="phoneNumber" class="form-input" placeholder="+91 98765 43210">
+            <small class="form-help">
+              For SMS notifications when it's almost your turn
+            </small>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+            <i class="fas fa-sign-in-alt"></i>
+            Join Queue
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Queue Created Success Modal -->
+  <div class="modal-overlay" id="queueCreatedModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-check-circle" style="color: var(--success);"></i>
+          Queue Created Successfully!
+        </h3>
+        <button class="modal-close" onclick="closeModal('queueCreatedModal')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="qr-display">
+          <div class="qr-code" id="generatedQR">
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <h4>Queue ID: <span id="newQueueId" class="queue-id">QA789ABC</span></h4>
+          <p class="qr-instructions">
+            Customers can scan this QR code or use the Queue ID to join your queue
+          </p>
+          <div class="action-buttons">
+            <button class="btn btn-primary" onclick="downloadQR()">
+              <i class="fas fa-download"></i>
+              Download QR
+            </button>
+            <button class="btn btn-secondary" onclick="shareQueue()">
+              <i class="fas fa-share"></i>
+              Share
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Queue Joined Success Modal -->
+  <div class="modal-overlay" id="queueJoinedModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-check-circle" style="color: var(--success);"></i>
+          Successfully Joined!
+        </h3>
+        <button class="modal-close" onclick="closeModal('queueJoinedModal')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div class="token-display">
+          <h2>Token: <span id="userToken">A036</span></h2>
+        </div>
+        <div class="position-stats">
+          <div class="stat">
+            <div class="stat-value" id="userPosition">12</div>
+            <div class="stat-label">Position</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="userWaitTime">8 min</div>
+            <div class="stat-label">Est. Wait</div>
+          </div>
+        </div>
+        <p class="join-message">
+          You'll receive notifications as your turn approaches. Feel free to leave and come back!
+        </p>
+        <button class="btn btn-primary" style="width: 100%;" onclick="closeModal('queueJoinedModal')">
+          <i class="fas fa-check"></i>
+          Got It
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab-container">
+    <button class="fab chat-fab" onclick="toggleChat()" title="AI Assistant">
+      <i class="fas fa-robot"></i>
+    </button>
+    <button class="fab join-fab" onclick="openJoinQueueModal()" title="Join Queue">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+
+    <!-- Pro Upgrade Modal -->
+  <div class="modal-overlay" id="proUpgradeModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Upgrade to Pro</h3>
+        <button class="modal-close" onclick="closeModal('proUpgradeModal')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 1rem;">
+          You’ve reached your free queue creation limit. Upgrade to Pro for unlimited queues and premium features.
+        </p>
+        <ul style="margin-bottom: 1rem;">
+          <li>✔ Unlimited smart queues</li>
+          <li>✔ Priority wait time predictions</li>
+          <li>✔ Early turn alerts</li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;">
+          <i class="fas fa-crown"></i>
+          Upgrade to Pro
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
